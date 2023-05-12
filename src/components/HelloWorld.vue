@@ -16,6 +16,7 @@ data() {
       return this.greeting.length;
     }
   },
+  
   methods: {
     changetheme(event)
     {
@@ -23,8 +24,10 @@ data() {
       this.theme=event.target.value;
     }
   },
-setup()
+    props: ['msg'],
+setup(props)
 {
+   console.log(props.msg)
 const books = reactive([{bookname:"c",price:300},{bookname:"d",price:900}]);
 const count = ref(0);
 const typeinfo=ref("number");
@@ -39,10 +42,14 @@ return {count,square,typeinfo,increment,books};
 
 }
 }
+
+
 </script>
 
 <template>
+--{{msg}}--
 <table>
+
 <tr v-for="(m,index) in array">
 <td>{{m.firstname}}</td>
 <td>{{m.lastname}}</td></tr>

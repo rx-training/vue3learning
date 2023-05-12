@@ -1,4 +1,5 @@
 <script  setup>
+import SalesInvoice from './components/SalesInvoice.vue'
 import {ref,computed} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import HelloIndia from './components/HelloIndia.vue'
@@ -18,7 +19,7 @@ function login()
 </script>
 
 <template>
-<HelloIndia></HelloIndia>
+<!-- <HelloIndia></HelloIndia>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -31,8 +32,10 @@ function login()
   <input type="text" v-model="password"/>
   <button @click="login()">Login</button>
   <div v-if="status">
-  <HelloWorld msg="Vite + Vue" />
-  </div>
+  <HelloWorld msg="Hello Everyone" />
+  </div> -->
+
+  <SalesInvoice></SalesInvoice>
   
 </template>
 
